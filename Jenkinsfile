@@ -20,7 +20,9 @@ pipeline {
                 master()
             }
             steps {
-               echo 'build and deploy stage'
+                sh """
+                    mvn clean package
+                """
             }
         }
     }
