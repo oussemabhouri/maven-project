@@ -17,7 +17,7 @@ pipeline {
         }
         stage('build and deploy') {
             when {
-                master()
+                branch 'master'
             }
             steps {
                 sh """
